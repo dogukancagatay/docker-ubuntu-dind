@@ -1,0 +1,7 @@
+version: "3"
+services:
+
+  dind:
+    build: ./
+    image: dcagatay/ubuntu-dind:latest
+    privileged: true
