@@ -11,7 +11,7 @@ Docker-in-Docker is a docker solution mostly used on CI/CD pipelines. This dind 
 
 ### As Base Image
 
-If you want to use the image as base image, You can use it with the conventions of [s6-overlay](https://github.com/just-containers/s6-overlay) as well as adding your own `CMD`. Note that, s6-overlay uses `ENTRYPOINT`, so when consider calling it when overriding.
+You can and should use it as a base image. It is as simple as adding your own `CMD`. However, you may want to checkout the conventions and limits of [s6-overlay](https://github.com/just-containers/s6-overlay). **Note that**, s6-overlay uses `ENTRYPOINT`, so when consider calling it when overriding.
 
 ### Running the Image
 
@@ -32,7 +32,7 @@ You can build your own images specifying following build arguments.
 - `DOCKER_VERSION`: Docker version to be installed. Default: `20.10.7`
 - `DOCKER_CHANNEL`: Docker release channel. Can be one of _stable_, _test_, _nightly_. Default: `stable`
 - `DIND_COMMIT`: Moby project dind hack script commit hash. Default: `42b1175eda071c0e9121e1d64345928384a93df1`
-- `DOCKER_COMPOSE_VERSION`: Version of the _docker-compose_. Default: `1.29.1`
+- `DOCKER_COMPOSE_VERSION`: Version of the _docker-compose_. Default: `1.29.2`
 
 ## Credits
 
