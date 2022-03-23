@@ -1,5 +1,7 @@
 name: ci
 on:
+  schedule:
+    - cron:  '30 4 * * 3' # Run on every Wednesday
   push:
     branches:
       - 'master'
