@@ -36,7 +36,7 @@ You can build your own images specifying following build arguments.
 
 ## Credits
 
-I was inspired by (cruizba/ubuntu-dind)[https://github.com/cruizba/ubuntu-dind.git]. It uses a supervisord to run the dockerd as a service whereas this image uses the s6-overlay.
+I was inspired by [cruizba/ubuntu-dind](https://github.com/cruizba/ubuntu-dind.git). It uses a supervisord to run the dockerd as a service whereas this image uses the s6-overlay.
 
 ## WARNING
 

@@ -3,6 +3,10 @@ on:
   schedule:
     - cron:  '30 4 * * 3' # Run on every Wednesday
   push:
+    paths-ignore:
+      - 'README.md'
+      - 'LICENSE'
+      - 'docker-compose.yml'
     branches:
       - 'master'
 
