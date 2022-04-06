@@ -11,7 +11,7 @@ variable "DOCKER_COMPOSE_VERSION" {
 }
 
 group "default" {
-    targets = [ "latest", "20.04", "18.04" ]
+    targets = [ "latest", "20_04", "18_04" ]
 }
 
 target "latest" {
@@ -29,7 +29,7 @@ target "latest" {
     ]
 }
 
-target "20.04" {
+target "20_04" {
     inherits = ["latest"]
     args = {
         UBUNTU_TAG = "20.04"
@@ -41,7 +41,7 @@ target "20.04" {
     ]
 }
 
-target "18.04" {
+target "18_04" {
     inherits = ["latest"]
     args = {
         UBUNTU_TAG = "18.04"
