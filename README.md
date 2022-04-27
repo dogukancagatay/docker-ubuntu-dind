@@ -11,7 +11,7 @@ Docker-in-Docker is a docker solution mostly used on CI/CD pipelines. This dind 
 
 ### As Base Image
 
-You can and should use it as a base image. It is as simple as adding your own `CMD`. However, you may want to checkout the conventions and limits of [s6-overlay](https://github.com/just-containers/s6-overlay). **Note that**, s6-overlay uses `ENTRYPOINT`, so when consider calling it when overriding.
+You can and should use it as a base image. It is as simple as adding your own `CMD`. However, you may want to checkout the conventions and limits of [s6-overlay](https://github.com/just-containers/s6-overlay). **Note that**, s6-overlay uses `ENTRYPOINT`, so consider your use cases before using this image.
 
 ### Running the Image
 
