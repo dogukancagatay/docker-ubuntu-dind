@@ -1,3 +1,2 @@
-#!/usr/bin/with-contenv sh
-set -e
+#!/command/with-contenv sh
 exec /usr/local/bin/dind dockerd --storage-driver=overlay2 $DOCKER_EXTRA_OPTS

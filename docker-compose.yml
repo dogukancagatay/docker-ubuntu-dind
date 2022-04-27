@@ -1,7 +1,9 @@
 version: "3"
 services:
-
   dind:
-    build: ./
+    build:
+      context: ./
+      args:
+        UBUNTU_TAG: 22.04
     image: dcagatay/ubuntu-dind:latest
     privileged: true
