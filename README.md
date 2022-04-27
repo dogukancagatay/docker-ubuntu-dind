@@ -4,7 +4,8 @@ Docker-in-Docker is a docker solution mostly used on CI/CD pipelines. This dind 
 
 ## Tags
 
-- `20.04`, `latest`
+- `22.04`, `latest`
+- `20.04`
 - `18.04`
 
 ## Usage
@@ -29,10 +30,9 @@ You probably won't but you can run the image with the above command.
 
 You can build your own images specifying following build arguments.
 
-- `DOCKER_VERSION`: Docker version to be installed. Default: `20.10.7`
+- `DOCKER_VERSION`: Docker version to be installed. Default: `20.10.14`
 - `DOCKER_CHANNEL`: Docker release channel. Can be one of _stable_, _test_, _nightly_. Default: `stable`
-- `DIND_COMMIT`: Moby project dind hack script commit hash. Default: `42b1175eda071c0e9121e1d64345928384a93df1`
-- `DOCKER_COMPOSE_VERSION`: Version of the _docker-compose_. Default: `1.29.2`
+- `DOCKER_COMPOSE_VERSION`: Version of the _docker-compose_. Default: `2.4.1`
 
 ## Credits
 
