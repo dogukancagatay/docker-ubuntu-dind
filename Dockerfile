@@ -15,9 +15,9 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
   && rm -rf /var/lib/apt/lists/*
 
 ARG DOCKER_CHANNEL=stable
-ARG DOCKER_VERSION=20.10.14
-ARG DOCKER_COMPOSE_VERSION=2.4.1
-ARG S6_OVERLAY_VERSION=3.1.0.1
+ARG DOCKER_VERSION=20.10.17
+ARG DOCKER_COMPOSE_VERSION=2.9.0
+ARG S6_OVERLAY_VERSION=3.1.1.2
 
 # Install s6-overlay
 ADD https://github.com/just-containers/s6-overlay/releases/download/v${S6_OVERLAY_VERSION}/s6-overlay-noarch.tar.xz /tmp
