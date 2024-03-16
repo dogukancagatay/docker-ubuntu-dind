@@ -1,4 +1,4 @@
-ARG UBUNTU_TAG=20.04
+ARG UBUNTU_TAG=22.04
 FROM ubuntu:${UBUNTU_TAG}
 LABEL maintainer="Dogukan Cagatay <dcagatay@gmail.com>"
 
@@ -15,9 +15,9 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
   && rm -rf /var/lib/apt/lists/*
 
 ARG DOCKER_CHANNEL=stable
-ARG DOCKER_VERSION=20.10.17
-ARG DOCKER_COMPOSE_VERSION=2.9.0
-ARG S6_OVERLAY_VERSION=3.1.1.2
+ARG DOCKER_VERSION=25.0.4
+ARG DOCKER_COMPOSE_VERSION=2.24.7
+ARG S6_OVERLAY_VERSION=3.1.6.2
 
 # Install s6-overlay
 ADD https://github.com/just-containers/s6-overlay/releases/download/v${S6_OVERLAY_VERSION}/s6-overlay-noarch.tar.xz /tmp
@@ -42,7 +42,7 @@ RUN curl -fsSL --retry 3 "https://github.com/moby/moby/raw/v${DOCKER_VERSION}/ha
 RUN curl -fsSL --retry 3 "https://github.com/docker/compose/releases/download/v${DOCKER_COMPOSE_VERSION}/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose \
   && chmod +x /usr/local/bin/docker-compose
 
-COPY services.d /etc/services.d
+COPY s6-rc.d /etc/s6-overlay/s6-rc.d
 
 VOLUME /var/lib/docker
 

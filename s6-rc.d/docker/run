@@ -1,0 +1,2 @@
+#!/command/with-contenv sh
+/usr/local/bin/dind dockerd --iptables=false --ip6tables=false ${DOCKER_EXTRA_OPTS}
