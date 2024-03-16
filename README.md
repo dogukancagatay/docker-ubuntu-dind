@@ -30,9 +30,9 @@ You probably won't but you can run the image with the above command.
 
 You can build your own images specifying following build arguments.
 
-- `DOCKER_VERSION`: Docker version to be installed. Default: `20.10.14`
+- `DOCKER_VERSION`: Docker version to be installed.
 - `DOCKER_CHANNEL`: Docker release channel. Can be one of _stable_, _test_, _nightly_. Default: `stable`
-- `DOCKER_COMPOSE_VERSION`: Version of the _docker-compose_. Default: `2.4.1`
+- `DOCKER_COMPOSE_VERSION`: Version of the _docker-compose_.
 
 ## Credits
 
