@@ -83,6 +83,8 @@ jobs:
         with:
           platforms: linux/amd64,linux/arm64
           push: true
+          cache-from: |
+            dcagatay/ubuntu-dind:${{matrix.version}}
           tags: |
             dcagatay/ubuntu-dind:${{matrix.version}}
           build-args: |
